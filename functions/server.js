@@ -6,7 +6,7 @@ const port = 3000;
 
 let records = [];
 
-app.get("/", (req, res) => {
+router.get("/", (req, res) => {
   res.send("App is running..");
 });
 
@@ -39,6 +39,6 @@ router.get("/demo", (req, res) => {
   ]);
 });
 
-app.listen(port, () => console.log("server started"));
+// app.listen(port, () => console.log("server started"));
 app.use("/.netlify/functions/api", router);
 module.exports.handler = serverless(app);
