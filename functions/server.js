@@ -6,7 +6,7 @@ const port = 3000;
 
 let records = [];
 
-router.get("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("App is running..");
 });
 
